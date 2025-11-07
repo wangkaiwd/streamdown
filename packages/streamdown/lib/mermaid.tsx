@@ -83,7 +83,7 @@ export const Mermaid = ({ chart, className, config }: MermaidProps) => {
       <div className={cn("my-4 flex justify-center p-4", className)}>
         <div className="flex items-center space-x-2 text-muted-foreground">
           <div className="h-4 w-4 animate-spin rounded-full border-current border-b-2" />
-          <span className="text-sm">Loading diagram...</span>
+          <span className="text-sm">图表加载中...</span>
         </div>
       </div>
     );
@@ -94,7 +94,8 @@ export const Mermaid = ({ chart, className, config }: MermaidProps) => {
     return (
       <div className={cn("my-4 flex justify-center p-4", className)}>
         <div className="flex items-center space-x-2 text-muted-foreground">
-          <span className="text-sm"><ChartArea /></span>
+          <div className="h-4 w-4 animate-spin rounded-full border-current border-b-2" />
+          <span className="text-sm">图表加载中...</span>
         </div>
       </div>
     );
