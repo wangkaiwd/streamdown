@@ -6,40 +6,13 @@ export const MermaidDemo = () => {
 ## Simple Flowchart
 
 \`\`\`mermaid
-graph TD
-    A[Start] --> B{Decision}
-    B -->|Yes| C[Success]
-    B -->|No| D[Try Again]
-    D --> B
-    C --> E[End]
-\`\`\`
-
-## Process Flow
-
-\`\`\`mermaid
-flowchart LR
-    A[User Input] --> B[Validate]
-    B --> C{Valid?}
-    C -->|Yes| D[Process]
-    C -->|No| E[Show Error]
-    D --> F[Save Result]
-    E --> A
-    F --> G[Complete]
-\`\`\`
-
-## API Sequence
-
-\`\`\`mermaid
-sequenceDiagram
-    participant U as User
-    participant A as App
-    participant S as Server
-    
-    U->>A: Click render
-    A->>S: API Request
-    S-->>A: Response
-    A-->>U: Show diagram
-\`\`\``;
+xychart-beta
+    title "Sales Revenue"
+    x-axis [jan, feb, mar, apr, may, jun, jul, aug, sep, oct, nov, dec]
+    y-axis "Revenue (in $)" 4000 --> 11000
+    bar [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+    line [5000, 6000, 7500, 8200, 9500, 10500, 11000, 10200, 9200, 8500, 7000, 6000]
+`;
 
   return (
     <Section

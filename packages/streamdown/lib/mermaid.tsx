@@ -1,6 +1,7 @@
 import type { MermaidConfig } from "mermaid";
 import { useEffect, useState } from "react";
 import { cn } from "./utils";
+import { ChartArea } from 'lucide-react'
 
 const initializeMermaid = async (customConfig?: MermaidConfig) => {
   const defaultConfig: MermaidConfig = {
@@ -91,21 +92,10 @@ export const Mermaid = ({ chart, className, config }: MermaidProps) => {
   // Only show error if we have no valid SVG to display
   if (error && !svgContent && !lastValidSvg) {
     return (
-      <div
-        className={cn(
-          "rounded-lg border border-red-200 bg-red-50 p-4",
-          className
-        )}
-      >
-        <p className="font-mono text-red-700 text-sm">Mermaid Error: {error}</p>
-        <details className="mt-2">
-          <summary className="cursor-pointer text-red-600 text-xs">
-            Show Code
-          </summary>
-          <pre className="mt-2 overflow-x-auto rounded bg-red-100 p-2 text-red-800 text-xs">
-            {chart}
-          </pre>
-        </details>
+      <div className={cn("my-4 flex justify-center p-4", className)}>
+        <div className="flex items-center space-x-2 text-muted-foreground">
+          <span className="text-sm"><ChartArea /></span>
+        </div>
       </div>
     );
   }

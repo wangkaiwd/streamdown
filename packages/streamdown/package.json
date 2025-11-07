@@ -1,6 +1,6 @@
 {
-  "name": "streamdown",
-  "version": "1.4.0",
+  "name": "@sppk/streamdown",
+  "version": "0.0.1",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -12,7 +12,7 @@
       "require": "./dist/index.cjs"
     }
   },
-  "files": [
+	"files": [
     "dist",
     "README.md"
   ],
@@ -24,6 +24,7 @@
   },
   "scripts": {
     "build": "tsup",
+		"build:watch": "tsup --watch",
     "test": "vitest run",
     "test:ui": "vitest --ui run",
     "test:coverage": "vitest --coverage run"

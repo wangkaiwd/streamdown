@@ -22,20 +22,20 @@ export const metadata: Metadata = {
 
 const Home = () => (
   <div className="container mx-auto max-w-5xl divide-y px-0 sm:border-x">
-    <Header />
+    {/*<Header />
     <Hero />
     <Implementation />
     <Styles />
     <GitHubFlavoredMarkdown />
     <CodeBlocks />
-    <Mathematics />
+    <Mathematics />*/}
     <MermaidDemo />
-    <TerminatorParser />
+{/*    <TerminatorParser />
     <HardenedMarkdown />
     <Props />
     <CallToAction />
     <FAQ />
-    <Footer />
+    <Footer />*/}
   </div>
 );
 

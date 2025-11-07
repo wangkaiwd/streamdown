@@ -618,7 +618,7 @@ const CodeComponent = ({
             <CodeBlockCopyButton code={code} />
           </div>
         )}
-        <Mermaid chart={code} config={mermaidConfig} />
+        <Mermaid chart={code} className={className} config={mermaidConfig} />
       </div>
     );
   }
